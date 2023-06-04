@@ -1,0 +1,28 @@
+﻿<Window x:Class="HikkinkzWPF.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HikkinkzWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="STO4KA" Height="450" Width="800">
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="#fff" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" Color="Black" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="STO4KA" FontSize="40" FontWeight="Bold" Margin="0 0 0 20"/>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Регистрация" Click="Button_Window_Reg_Click" Style="{StaticResource MaterialDesignFlatDarkButton}" Cursor="Hand"/>
+                    <Button HorizontalAlignment="Right" Content="Авторизация"/>
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <Button Content="Войти" Margin="0 20" Click="Button_Auth_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
